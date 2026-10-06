@@ -320,7 +320,7 @@ class XingjieController(Star):
 
     async def list_servers(self) -> list:
         """获取当前账号下全部服务器。"""
-        data = await self._api_request("GET", "/")
+        data = await self._api_request("GET", "/servers")
         return data.get("data") or []
 
     async def send_command(self, command: str, server_id: str | None = None) -> None:
